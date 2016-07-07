@@ -36,18 +36,20 @@ def ranas_core(chocolates, pasos_minimos):
     
     choco_min = chocolates[0]
     
-#    print("min de choco %d" % choco_min)
+    print("min de choco %d" % choco_min)
     
     for chocolatin in chocolates:
         diferencia = 0
         
         diferencia = chocolatin - choco_min
         
-#        print("la diferencia entre %u y el min %u es %u" % (chocolatin, choco_min, diferencia))
+        print("la diferencia entre %u y el min %u es %u" % (chocolatin, choco_min, diferencia))
         
         num_movs += pasos_minimos[diferencia]
+#        print(type(num_movs))
+#        print(type(pasos_minimos[diferencia]))
         
-#        print("los movs q van %u" % num_movs)
+        print("los movs act %u acum %u" % (pasos_minimos[diferencia], num_movs))
         
     return num_movs
     
@@ -69,6 +71,8 @@ def ranas_main():
         num_nums = int(lineas[num_linea])
         
         numeros = [int(x) for x in lineas[num_linea + 1].strip().split(" ")]
+        
+        assert(num_nums == len(numeros))
         
 #        print("los numeros %s" % numeros)
         
