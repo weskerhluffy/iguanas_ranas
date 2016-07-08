@@ -50,7 +50,7 @@ def ranas_core(chocolates, pasos_minimos):
 		
 		diferencia = chocolatin - choco_min
 		
-		# print("la diferencia entre %u y el min %u es %u" % (chocolatin, choco_min, diferencia))
+#		print("la diferencia entre %u y el min %u es %u" % (chocolatin, choco_min, diferencia))
 		
 		num_movs += pasos_minimos[diferencia]
 # 		#print(type(num_movs))
@@ -62,7 +62,7 @@ def ranas_core(chocolates, pasos_minimos):
 
 		clase_5_difs[clase_5] += 1
 
-		# print("i travel clase %u elems %u"%(clase_5,clase_5_difs[clase_5]))
+#		print("i travel clase %u elems %u"%(clase_5,clase_5_difs[clase_5]))
 	
 		if(not diferencia):
 			num_mins += 1
@@ -73,20 +73,20 @@ def ranas_core(chocolates, pasos_minimos):
 		num_pasos_demenos = 0
 		clase_actual = 0
 		beneficio_actual = 0
-		clase_afectada_lateralmente=0
+		clase_afectada_lateralmente = 0
 
 		clase_actual = 5 - resta_a_minimo_act
 		
-		if(resta_a_minimo_act==1):
-			clase_afectada_lateralmente=2
+		if(resta_a_minimo_act == 1):
+			clase_afectada_lateralmente = 2
 		else:
-			clase_afectada_lateralmente=1
+			clase_afectada_lateralmente = 1
 		
-		num_pasos_demas = num_mins+clase_5_difs[clase_afectada_lateralmente]
+		num_pasos_demas = num_mins + clase_5_difs[0] + clase_5_difs[clase_afectada_lateralmente]-1
 
 		num_pasos_demenos = clase_5_difs[clase_actual]
 
-		# print("en la clase %u el num d pasos de mas %u de mens %u"%(clase_actual,num_pasos_demas,num_pasos_demenos))
+#		print("en la clase %u el num d pasos de mas %u de mens %u"%(clase_actual,num_pasos_demas,num_pasos_demenos))
 
 		beneficio_actual = num_pasos_demenos - num_pasos_demas
 
